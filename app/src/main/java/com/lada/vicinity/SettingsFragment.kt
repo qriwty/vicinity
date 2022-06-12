@@ -6,14 +6,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.lada.vicinity.databinding.FragmentFourthBinding
+import com.lada.vicinity.databinding.FragmentSettingsBinding
 
 /**
  * A simple [Fragment] subclass as the fourth destination in the navigation.
  */
-class FourthFragment : Fragment() {
-
-    private var _binding: FragmentFourthBinding? = null
+class SettingsFragment : Fragment() {
+    private var _binding: FragmentSettingsBinding? = null
 
     private val binding get() = _binding!!
 
@@ -22,7 +21,7 @@ class FourthFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        _binding = FragmentFourthBinding.inflate(inflater, container, false)
+        _binding = FragmentSettingsBinding.inflate(inflater, container, false)
         return binding.root
 
     }
@@ -30,8 +29,8 @@ class FourthFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.buttonFourth.setOnClickListener {
-            findNavController().navigate(R.id.action_FourthFragment_to_FirstFragment)
+        binding.buttonSettings.setOnClickListener {
+            findNavController().navigate(R.id.action_SettingsFragment_to_MenuFragment)
         }
     }
 

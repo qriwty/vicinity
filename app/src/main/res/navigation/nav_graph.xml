@@ -3,52 +3,52 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/MenuFragment">
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="com.lada.vicinity.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
+        android:id="@+id/MenuFragment"
+        android:name="com.lada.vicinity.MenuFragment"
+        android:label="@string/menu_fragment_label"
+        tools:layout="@layout/fragment_menu">
 
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_MenuFragment_to_NewModelFragment"
+            app:destination="@id/NewModelFragment" />
         <action
-            android:id="@+id/action_FirstFragment_to_ThirdFragment"
-            app:destination="@id/ThirdFragment" />
+            android:id="@+id/action_MenuFragment_to_GalleryFragment"
+            app:destination="@id/GalleryFragment" />
         <action
-            android:id="@+id/action_FirstFragment_to_FourthFragment"
-            app:destination="@id/FourthFragment" />
+            android:id="@+id/action_MenuFragment_to_SettingsFragment"
+            app:destination="@id/SettingsFragment" />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.lada.vicinity.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
+        android:id="@+id/NewModelFragment"
+        android:name="com.lada.vicinity.NewModelFragment"
+        android:label="@string/new_model_fragment_label"
+        tools:layout="@layout/fragment_new_model">
 
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_NewModelFragment_to_MenuFragment"
+            app:destination="@id/MenuFragment" />
     </fragment>
     <fragment
-        android:id="@+id/ThirdFragment"
-        android:name="com.lada.vicinity.ThirdFragment"
-        android:label="@string/third_fragment_label"
-        tools:layout="@layout/fragment_third">
+        android:id="@+id/GalleryFragment"
+        android:name="com.lada.vicinity.GalleryFragment"
+        android:label="@string/gallery_fragment_label"
+        tools:layout="@layout/fragment_gallery">
 
         <action
-            android:id="@+id/action_ThirdFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_GalleryFragment_to_MenuFragment"
+            app:destination="@id/MenuFragment" />
     </fragment>
     <fragment
-        android:id="@+id/FourthFragment"
-        android:name="com.lada.vicinity.FourthFragment"
-        android:label="@string/fourth_fragment_label"
-        tools:layout="@layout/fragment_fourth">
+        android:id="@+id/SettingsFragment"
+        android:name="com.lada.vicinity.SettingsFragment"
+        android:label="@string/settings_fragment_label"
+        tools:layout="@layout/fragment_settings">
 
         <action
-            android:id="@+id/action_FourthFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_SettingsFragment_to_MenuFragment"
+            app:destination="@id/MenuFragment" />
     </fragment>
 </navigation>

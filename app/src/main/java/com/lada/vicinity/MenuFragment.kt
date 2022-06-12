@@ -6,17 +6,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.lada.vicinity.databinding.FragmentFirstBinding
+import com.lada.vicinity.databinding.FragmentMenuBinding
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
  */
-class FirstFragment : Fragment() {
+class MenuFragment : Fragment() {
 
-    private var _binding: FragmentFirstBinding? = null
+    private var _binding: FragmentMenuBinding? = null
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -24,7 +22,7 @@ class FirstFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        _binding = FragmentFirstBinding.inflate(inflater, container, false)
+        _binding = FragmentMenuBinding.inflate(inflater, container, false)
         return binding.root
 
     }
@@ -33,15 +31,15 @@ class FirstFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.buttonNewModel.setOnClickListener {
-            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
+            findNavController().navigate(R.id.action_MenuFragment_to_NewModelFragment)
         }
 
         binding.buttonGallery.setOnClickListener {
-            findNavController().navigate(R.id.action_FirstFragment_to_ThirdFragment)
+            findNavController().navigate(R.id.action_MenuFragment_to_GalleryFragment)
         }
 
         binding.buttonSettings.setOnClickListener {
-            findNavController().navigate(R.id.action_FirstFragment_to_FourthFragment)
+            findNavController().navigate(R.id.action_MenuFragment_to_SettingsFragment)
         }
 
     }

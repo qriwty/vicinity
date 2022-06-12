@@ -6,14 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.lada.vicinity.databinding.FragmentThirdBinding
+import com.lada.vicinity.databinding.FragmentGalleryBinding
 
 /**
  * A simple [Fragment] subclass as the third destination in the navigation.
  */
-class ThirdFragment : Fragment() {
+class GalleryFragment : Fragment() {
 
-    private var _binding: FragmentThirdBinding? = null
+    private var _binding: FragmentGalleryBinding? = null
 
     private val binding get() = _binding!!
 
@@ -22,7 +22,7 @@ class ThirdFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        _binding = FragmentThirdBinding.inflate(inflater, container, false)
+        _binding = FragmentGalleryBinding.inflate(inflater, container, false)
         return binding.root
 
     }
@@ -30,8 +30,8 @@ class ThirdFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.buttonThird.setOnClickListener {
-            findNavController().navigate(R.id.action_ThirdFragment_to_FirstFragment)
+        binding.buttonGallery.setOnClickListener {
+            findNavController().navigate(R.id.action_GalleryFragment_to_MenuFragment)
         }
     }
 
