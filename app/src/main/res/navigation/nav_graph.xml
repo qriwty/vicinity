@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/MenuFragment"
-        android:name="com.lada.vicinity.MenuFragment"
+        android:name="com.lada.vicinity.fragments.MenuFragment"
         android:label="@string/menu_fragment_label"
         tools:layout="@layout/fragment_menu">
 
@@ -23,7 +23,7 @@
     </fragment>
     <fragment
         android:id="@+id/NewModelFragment"
-        android:name="com.lada.vicinity.NewModelFragment"
+        android:name="com.lada.vicinity.fragments.NewModelFragment"
         android:label="@string/new_model_fragment_label"
         tools:layout="@layout/fragment_new_model">
 
@@ -33,7 +33,7 @@
     </fragment>
     <fragment
         android:id="@+id/GalleryFragment"
-        android:name="com.lada.vicinity.GalleryFragment"
+        android:name="com.lada.vicinity.fragments.GalleryFragment"
         android:label="@string/gallery_fragment_label"
         tools:layout="@layout/fragment_gallery">
 
@@ -43,7 +43,7 @@
     </fragment>
     <fragment
         android:id="@+id/SettingsFragment"
-        android:name="com.lada.vicinity.SettingsFragment"
+        android:name="com.lada.vicinity.fragments.SettingsFragment"
         android:label="@string/settings_fragment_label"
         tools:layout="@layout/fragment_settings">
 

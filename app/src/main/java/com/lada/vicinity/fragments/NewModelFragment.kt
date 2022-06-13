@@ -1,4 +1,4 @@
-package com.lada.vicinity
+package com.lada.vicinity.fragments
 
 import android.os.Bundle
 import android.text.Editable
@@ -12,6 +12,8 @@ import androidx.navigation.fragment.findNavController
 import com.lada.vicinity.databinding.FragmentNewModelBinding
 import java.io.File
 import com.google.gson.Gson
+import com.lada.vicinity.utils.Model
+import com.lada.vicinity.R
 
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.

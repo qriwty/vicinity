@@ -14,4 +14,8 @@
     <color name="success">#FF0BA11F</color>
     <color name="error">#FFDA171F</color>
 
+    <color name="icActive">#FFFFFFFF</color>
+    <color name="icFocused">#DDFFFFFF</color>
+    <color name="icPressed">#AAFFFFFF</color>
+
 </resources>

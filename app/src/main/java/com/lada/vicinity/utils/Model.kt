@@ -1,4 +1,4 @@
-package com.lada.vicinity
+package com.lada.vicinity.utils
 
 import java.util.*
 
