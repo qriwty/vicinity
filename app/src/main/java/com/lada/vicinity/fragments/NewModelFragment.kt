@@ -6,13 +6,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
+import androidx.core.os.bundleOf
 import androidx.core.widget.doAfterTextChanged
 import androidx.navigation.fragment.findNavController
 import com.lada.vicinity.databinding.FragmentNewModelBinding
-import java.io.File
-import com.google.gson.Gson
 import com.lada.vicinity.utils.Model
+import com.lada.vicinity.ModelController
 import com.lada.vicinity.R
 
 /**
@@ -25,6 +24,8 @@ class NewModelFragment : Fragment() {
     private val binding get() = _binding!!
 
     private var model: Model? = null
+
+    private val modelController = ModelController()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -50,7 +51,15 @@ class NewModelFragment : Fragment() {
         }
 
         binding.buttonNewModelNext.setOnClickListener {
-            createNewModel()
+            context?.let { context ->
+                model?.let { model ->
+                    modelController.createModelConfig(context, model)
+                }
+            }
+
+            val bundle = bundleOf("model" to model)
+            findNavController().navigate(R.id.action_NewModelFragment_to_CameraFragment, bundle)
+
         }
     }
 
@@ -99,34 +108,6 @@ class NewModelFragment : Fragment() {
         } else {
             showNameError(inputText)
         }
-
-    }
-
-    private fun createFolder(name: String): File {
-        val filesDir = activity?.filesDir
-        val folder = File(filesDir, name)
-
-        folder.mkdir()
-
-        return folder
-    }
-
-    private fun writeModel(model: Model, folder: File, fileName: String) {
-        val file = folder.resolve(File(fileName))
-        val gson = Gson()
-        val gsonModel = gson.toJson(model)
-
-        file.writeText(gsonModel)
-    }
-
-    private fun createNewModel() {
-        val folder = createFolder(model!!.name)
-
-        Toast.makeText(activity, folder.path, Toast.LENGTH_LONG).show()
-
-        writeModel(model!!, folder, "config.json")
-
-
 
     }
 
