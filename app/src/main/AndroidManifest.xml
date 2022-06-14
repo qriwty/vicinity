@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.lada.vicinity">
+
+    <dist:module dist:instant="true" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -9,6 +17,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Vicinity">
+        <activity
+            android:name=".PhotoActivity"
+            android:exported="false"
+            android:clearTaskOnLaunch="true"
+            android:icon="@mipmap/ic_launcher"
+            android:screenOrientation="fullUser"
+            android:rotationAnimation="seamless"
+            android:resizeableActivity="true"
+            android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize">
+            <intent-filter>
+                <action android:name="android.media.action.IMAGE_CAPTURE" />
+                <action android:name="android.media.action.STILL_IMAGE_CAMERA"/>
+                <action android:name="android.media.action.VIDEO_CAMERA" />
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <meta-data android:name="android.notch_support" android:value="true"/>
+        </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true"

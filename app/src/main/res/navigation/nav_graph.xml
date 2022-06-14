@@ -1,9 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/MenuFragment">
+    app:startDestination="@id/permissions_fragment">
+
+    <fragment
+        android:id="@+id/permissions_fragment"
+        android:name="com.lada.vicinity.fragments.PermissionsFragment"
+        android:label="PermissionsFragment">
+
+        <action
+            android:id="@+id/action_permissions_to_main"
+            app:destination="@id/MenuFragment"
+            app:popUpTo="@id/permissions_fragment"
+            app:popUpToInclusive="true" />
+
+    </fragment>
 
     <fragment
         android:id="@+id/MenuFragment"
@@ -21,6 +35,7 @@
             android:id="@+id/action_MenuFragment_to_SettingsFragment"
             app:destination="@id/SettingsFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/NewModelFragment"
         android:name="com.lada.vicinity.fragments.NewModelFragment"
@@ -34,6 +49,7 @@
             android:id="@+id/action_NewModelFragment_to_CameraFragment"
             app:destination="@id/CameraFragment"/>
     </fragment>
+
     <fragment
         android:id="@+id/GalleryFragment"
         android:name="com.lada.vicinity.fragments.GalleryFragment"
@@ -44,6 +60,7 @@
             android:id="@+id/action_GalleryFragment_to_MenuFragment"
             app:destination="@id/MenuFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/SettingsFragment"
         android:name="com.lada.vicinity.fragments.SettingsFragment"
@@ -54,6 +71,7 @@
             android:id="@+id/action_SettingsFragment_to_MenuFragment"
             app:destination="@id/MenuFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/CameraFragment"
         android:name="com.lada.vicinity.fragments.CameraFragment"
@@ -67,4 +85,5 @@
             android:name="model"
             app:argType="com.lada.vicinity.utils.Model" />
     </fragment>
+
 </navigation>
