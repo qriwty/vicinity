@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_photo"
+    app:startDestination="@id/CameraFragment">
+
+    <fragment
+        android:id="@+id/CameraFragment"
+        android:name="com.lada.vicinity.fragments.CameraFragment"
+        android:label="@string/menu_fragment_label"
+        tools:layout="@layout/fragment_camera">
+
+    </fragment>
+
+</navigation>

@@ -1,5 +1,6 @@
 package com.lada.vicinity.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import androidx.fragment.app.Fragment
@@ -12,6 +13,7 @@ import androidx.navigation.fragment.findNavController
 import com.lada.vicinity.databinding.FragmentNewModelBinding
 import com.lada.vicinity.utils.Model
 import com.lada.vicinity.ModelController
+import com.lada.vicinity.PhotoActivity
 import com.lada.vicinity.R
 
 /**
@@ -58,7 +60,11 @@ class NewModelFragment : Fragment() {
             }
 
             val bundle = bundleOf("model" to model)
-            findNavController().navigate(R.id.action_NewModelFragment_to_CameraFragment, bundle)
+
+            val intent = Intent(activity, PhotoActivity::class.java)
+            intent.putExtras(bundle)
+
+            startActivity(intent)
 
         }
     }
