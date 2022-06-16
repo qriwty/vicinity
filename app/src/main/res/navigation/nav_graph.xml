@@ -26,6 +26,12 @@
         tools:layout="@layout/fragment_menu">
 
         <action
+            android:id="@+id/action_menu_to_permissions"
+            app:destination="@id/permissions_fragment"
+            app:popUpTo="@id/MenuFragment"
+            app:popUpToInclusive="true"/>
+
+        <action
             android:id="@+id/action_MenuFragment_to_NewModelFragment"
             app:destination="@id/NewModelFragment" />
         <action

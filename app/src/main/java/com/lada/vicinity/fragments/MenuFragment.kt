@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import com.lada.vicinity.R
 import com.lada.vicinity.databinding.FragmentMenuBinding
@@ -43,6 +44,13 @@ class MenuFragment : Fragment() {
             findNavController().navigate(R.id.action_MenuFragment_to_SettingsFragment)
         }
 
+    }
+
+    override fun onResume() {
+        super.onResume()
+        if (!PermissionsFragment.hasPermissions(requireContext())) {
+            findNavController().navigate(R.id.action_menu_to_permissions)
+        }
     }
 
     override fun onDestroyView() {

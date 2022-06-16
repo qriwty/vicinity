@@ -152,18 +152,7 @@ class CameraFragment : Fragment() {
             setUpCamera()
         }
 
-
-
     }
-
-//    override fun onResume() {
-//        super.onResume()
-//        if (!PermissionsFragment.hasPermissions(requireContext())) {
-//            Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_photo).navigate(
-//                CameraFragmentDirections.actionCameraToPermissions()
-//            )
-//        }
-//    }
 
     override fun onDestroyView() {
         super.onDestroyView()
@@ -422,12 +411,12 @@ class CameraFragment : Fragment() {
 
         cameraUiContainerBinding?.photoViewButton?.setOnClickListener {
 
-//            if (true == outputDirectory.listFiles()?.isNotEmpty()) {
-//                Navigation.findNavController(
-//                    requireActivity(), R.id.nav_host_fragment_activity_photo
-//                ).navigate(CameraFragmentDirections
-//                    .actionCameraToGallery(outputDirectory.absolutePath))
-//            }
+            if (true == outputDirectory.listFiles()?.isNotEmpty()) {
+                Navigation.findNavController(
+                    requireActivity(), R.id.nav_host_fragment_activity_photo
+                ).navigate(CameraFragmentDirections
+                    .actionCameraFragmentToPhotoGalleryFragment(outputDirectory.absolutePath))
+            }
         }
     }
 

@@ -12,6 +12,22 @@
         android:label="@string/menu_fragment_label"
         tools:layout="@layout/fragment_camera">
 
+        <action
+            android:id="@+id/action_CameraFragment_to_PhotoGalleryFragment"
+            app:destination="@id/PhotoGalleryFragment" />
+
     </fragment>
+
+    <fragment
+        android:id="@+id/PhotoGalleryFragment"
+        android:name="com.lada.vicinity.fragments.PhotoGalleryFragment"
+        android:label="@string/photo_gallery_fragment_label" >
+
+        <argument
+            android:name="root_directory"
+            app:argType="string" />
+
+    </fragment>
+
 
 </navigation>
