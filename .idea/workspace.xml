@@ -12,18 +12,11 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c321888-34e5-4e64-bbf2-c6dc0895d091" name="Default Changelist" comment="Added Photo Gallery">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/lada/vicinity/utils/GalleryAdapter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_grid_layout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_linear_layout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_view.xml" afterDir="false" />
+    <list default="true" id="5c321888-34e5-4e64-bbf2-c6dc0895d091" name="Default Changelist" comment="Updated Photo Gallery">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/lada/vicinity/ModelController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/lada/vicinity/ModelController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/lada/vicinity/fragments/GalleryFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/lada/vicinity/fragments/GalleryFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_gallery.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_gallery.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/menu_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/menu_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/lada/vicinity/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/lada/vicinity/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/lada/vicinity/PhotoActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/lada/vicinity/PhotoActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_view.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_view.xml" afterDir="false" />
     </list>
     <list id="45af7deb-e3dd-44e6-86db-c5cd1637b7ac" name="Revert &quot;Basic update&quot;" comment="Revert &quot;Basic update&quot;&#10;&#10;This reverts commit 74600f62" />
     <option name="SHOW_DIALOG" value="false" />
@@ -271,7 +264,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655401161816</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Updated Photo Gallery">
+      <created>1655438530685</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1655438530685</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -308,24 +308,25 @@
     <MESSAGE value="Added permissions management and base for photo activity" />
     <MESSAGE value="Added Camera" />
     <MESSAGE value="Added Photo Gallery" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Photo Gallery" />
+    <MESSAGE value="Updated Photo Gallery" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Photo Gallery" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/lada/vicinity/PhotoActivity.kt</url>
-          <line>65</line>
+          <line>66</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/lada/vicinity/PhotoActivity.kt</url>
-          <line>69</line>
+          <line>70</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/lada/vicinity/ModelController.kt</url>
-          <line>29</line>
+          <line>28</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>

@@ -48,26 +48,19 @@ class PhotoActivity : AppCompatActivity() {
         }
     }
 
-    companion object {
-        const val KEY_EVENT_ACTION = "key_event_action"
-        const val KEY_EVENT_EXTRA = "key_event_extra"
-        private const val IMMERSIVE_FLAG_TIMEOUT = 500L
-    }
-
     private fun hideSystemUI() {
         WindowCompat.setDecorFitsSystemWindows(window, false)
         WindowInsetsControllerCompat(window, binding.navHostFragmentActivityPhoto).let { controller ->
             controller.hide(WindowInsetsCompat.Type.systemBars())
             controller.systemBarsBehavior = WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
         }
+        supportActionBar?.hide()
     }
 
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//
-//        binding = ActivityPhotoBinding.inflate(layoutInflater)
-//
-//        setContentView(binding.root)
-////        setContentView(R.layout.activity_photo)
-//    }
+    companion object {
+        const val KEY_EVENT_ACTION = "key_event_action"
+        const val KEY_EVENT_EXTRA = "key_event_extra"
+        private const val IMMERSIVE_FLAG_TIMEOUT = 500L
+    }
+
 }
