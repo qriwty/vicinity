@@ -2,6 +2,7 @@
     <string name="app_name">Vicinity</string>
     <string name="action_gallery">Gallery</string>
     <string name="action_settings">Settings</string>
+    <string name="action_switch_layout">Switch Layout</string>
     <!-- Strings used for fragments for navigation -->
     <string name="menu_fragment_label">Vicinity</string>
     <string name="new_model_fragment_label">New model Fragment</string>
@@ -21,4 +22,6 @@
 
     <string name="delete_dialog">Delete current photo?</string>
     <string name="delete_title">Confirm</string>
+
+    <string name="look_up_words">Show Stored Words</string>
 </resources>
