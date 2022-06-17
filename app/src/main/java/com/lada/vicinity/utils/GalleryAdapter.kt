@@ -5,13 +5,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.content.Context
+import android.content.Intent
 import android.view.accessibility.AccessibilityNodeInfo
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.annotation.RequiresApi
+import androidx.core.content.ContextCompat.startActivity
+import androidx.core.os.bundleOf
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.lada.vicinity.ModelActivity
 import com.lada.vicinity.ModelController
+import com.lada.vicinity.PhotoActivity
 import com.lada.vicinity.R
 
 class GalleryAdapter(private val context: Context) : RecyclerView.Adapter<GalleryAdapter.ModelViewHolder>() {
@@ -27,6 +33,18 @@ class GalleryAdapter(private val context: Context) : RecyclerView.Adapter<Galler
 
             textField.text = model
             setGalleryThumbnail(model, imageField)
+
+            view.setOnClickListener {
+                Toast.makeText(context, model, Toast.LENGTH_SHORT).show()
+
+//                val bundle = bundleOf("model" to Model(model))
+//                val intent = Intent(context, PhotoActivity::class.java)
+//                intent.putExtras(bundle)
+//                context.startActivity(intent)
+
+                context.startActivity(Intent(context, ModelActivity::class.java))
+
+            }
         }
     }
 
@@ -47,11 +65,6 @@ class GalleryAdapter(private val context: Context) : RecyclerView.Adapter<Galler
         val item = list.get(position)
 
         holder.bind(item)
-
-        // IN PROGRESS
-        holder.itemView.setOnClickListener {
-            // DO SOMETHING
-        }
 
     }
 

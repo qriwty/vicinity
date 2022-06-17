@@ -24,4 +24,9 @@
     <string name="delete_title">Confirm</string>
 
     <string name="look_up_words">Show Stored Words</string>
+
+    <string name="read_permission_failed">Please allow read permission to open model files.</string>
+    <string name="open_model">Open model…</string>
+    <string name="open_model_success">Model loaded successfully.</string>
+    <string name="open_model_error">Failed to load model: %s</string>
 </resources>
