@@ -4,13 +4,13 @@
     <string name="action_gallery">Gallery</string>
     <string name="action_settings">Settings</string>
     <string name="action_switch_layout">Switch Layout</string>
-    <!-- Strings used for fragments for navigation -->
+
     <string name="menu_fragment_label">Vicinity</string>
-    <string name="new_model_fragment_label">New model Fragment</string>
-    <string name="gallery_fragment_label">Gallery Fragment</string>
-    <string name="settings_fragment_label">Settings Fragment</string>
-    <string name="camera_fragment_label">Camera Fragment</string>
-    <string name="photo_gallery_fragment_label">Gallery Fragment</string>
+    <string name="new_model_fragment_label">New model</string>
+    <string name="gallery_fragment_label">Gallery</string>
+    <string name="settings_fragment_label">Settings</string>
+    <string name="camera_fragment_label">Camera</string>
+    <string name="photo_gallery_fragment_label">Gallery</string>
 
     <string name="next">Next</string>
     <string name="previous">Previous</string>
