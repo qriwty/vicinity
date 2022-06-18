@@ -13,16 +13,16 @@ class ModelController {
     private val gson = Gson()
     private val configFilename: String = "config.cfg"
 
-    fun getModelsList(context: Context): Array<String> {
+    fun getModelsList(context: Context): ArrayList<String> {
 //        val internalDir = context.filesDir
         val mediaDir = context.getExternalFilesDir(null)
 
-        var modelsName: Array<String> = emptyArray()
+        val modelsName: ArrayList<String> = ArrayList()
         mediaDir?.walk()?.forEach {
             if (it.isDirectory && File(it, configFilename).exists()) {
                 val model = readModel(it, configFilename)
 
-                modelsName += model.name.toString()
+                modelsName.add(model.name.toString())
             }
         }
 
@@ -93,6 +93,13 @@ class ModelController {
         val folder = getOutputDirectory(context, model)
 
         writeModel(model, folder, configFilename)
+    }
+
+    fun deleteModel(context: Context, model: String) {
+        val modelDirectory = getModelDirectory(context, model)
+
+        modelDirectory?.deleteRecursively()
+
     }
 
 }

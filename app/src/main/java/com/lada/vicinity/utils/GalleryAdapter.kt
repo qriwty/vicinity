@@ -6,18 +6,17 @@ import android.view.View
 import android.view.ViewGroup
 import android.content.Context
 import android.content.Intent
+import android.media.MediaScannerConnection
 import android.view.accessibility.AccessibilityNodeInfo
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
-import androidx.core.content.ContextCompat.startActivity
-import androidx.core.os.bundleOf
+import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.lada.vicinity.ModelActivity
 import com.lada.vicinity.ModelController
-import com.lada.vicinity.PhotoActivity
 import com.lada.vicinity.R
 
 class GalleryAdapter(private val context: Context) : RecyclerView.Adapter<GalleryAdapter.ModelViewHolder>() {
@@ -44,6 +43,11 @@ class GalleryAdapter(private val context: Context) : RecyclerView.Adapter<Galler
 
                 context.startActivity(Intent(context, ModelActivity::class.java))
 
+            }
+            view.setOnLongClickListener {
+                deleteGalleryModel(model)
+
+                return@setOnLongClickListener true
             }
         }
     }
@@ -74,6 +78,24 @@ class GalleryAdapter(private val context: Context) : RecyclerView.Adapter<Galler
 
         Glide.with(context).load(photoPreview).into(imageView)
 
+    }
+
+    private fun deleteGalleryModel(modelName: String) {
+        AlertDialog.Builder(context, android.R.style.Theme_Material_Dialog)
+            .setTitle(R.string.delete_title)
+            .setMessage(context.getString(R.string.delete_model, modelName))
+            .setIcon(android.R.drawable.ic_dialog_alert)
+            .setPositiveButton(android.R.string.yes) { _, _ ->
+
+                modelController.deleteModel(context, modelName)
+
+                val modelPosition = list.indexOf(modelName)
+                list.remove(modelName)
+                notifyItemRemoved(modelPosition)
+
+                Toast.makeText(context, "Deleted model: $modelName", Toast.LENGTH_SHORT).show()
+
+            }.show()
     }
 
     companion object Accessibility : View.AccessibilityDelegate() {
